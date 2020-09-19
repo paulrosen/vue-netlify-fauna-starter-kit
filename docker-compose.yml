@@ -1,0 +1,23 @@
+# To get a shell: docker-compose run --rm app sh
+# To run an npm command, just run it normally. .zshrc contains an alias to:
+#    CMD="${1: } ${2: } ${3: }" docker-compose up
+# so that "npm run dev" from the mac command line, or anything else will work.
+
+version: '3.7'
+
+services:
+  app:
+    image: fauna-starter
+    build: .
+    environment:
+      - "CMD=${CMD}"
+      - "FAUNADB_SERVER_SECRET=${FAUNADB_SERVER_SECRET}"
+    container_name: fauna-starter
+    command: npm ${CMD}
+    volumes:
+      - .:/srv/app
+      - ./node_modules:/srv/app/node_modules
+    ports:
+        - "3000:3000"
+        - "34567:34567"
+        - "$fauna_starter:8080"
