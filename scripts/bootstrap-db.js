@@ -128,12 +128,12 @@ function checkForFaunaKey() {
 
 setupFaunaDB()
   .then(() => {
-    console.log(chalk.green(`Bootstraping DB scheamas was successful!`));
+    console.log(chalk.green(`Bootstraping DB schemas was successful!`));
   })
   .catch(err => {
     console.log(
       chalk.red.bold(
-        `There was an issue bootstrapping the DB scheamas due to: ${err}`
+        `There was an issue bootstrapping the DB schemas due to: ${err}`
       )
     );
     process.exit(1);
