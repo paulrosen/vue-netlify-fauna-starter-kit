@@ -7,7 +7,7 @@
       <p>
         This is a demo app to show how you can use cool technologies like Fauna
         and Netlify to build a CRUD application completely serverless and host
-        for free! 😎
+        for free!
       </p>
 
       <p>
@@ -20,10 +20,10 @@
     </div>
     <LoginSignup v-if="currentUser === null" />
     <div v-else id="greeting">
-      <h2>🖐️ Welcome Back {{ currentUser.user_metadata.full_name }}!</h2>
+      <h2>️ Welcome Back {{ currentUser.user_metadata.full_name }}!</h2>
       <p>
         You're logged in. Go check out your
-        <router-link :to="{ name: 'journals' }">journals ➡️ </router-link>.
+        <router-link :to="{ name: 'journals' }">tunebooks️ </router-link>.
       </p>
     </div>
     <GithubCorner
