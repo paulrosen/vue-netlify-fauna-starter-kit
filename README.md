@@ -33,7 +33,7 @@ It will only take a few moments for Netlify to deploy the site, once ready, clic
 
 To run under docker, start it the first time with:
 ```bash
-FAUNADB_SERVER_SECRET=fnAD2GEL8QACEnBQFZTGbNVHi9WpBeSwpluS__DE
+FAUNADB_SERVER_SECRET=my-secret
 export FAUNADB_SERVER_SECRET   
 FAUNADB_SERVER_SECRET=$FAUNADB_SERVER_SECRET npm run start
 ```
