@@ -28,6 +28,18 @@ const routes = [
     meta: { authRequired: true }
   },
   {
+    path: "/:collection/edit/:id",
+    name: "edit",
+    component: () => import("./pages/DbEdit.vue"),
+    meta: { authRequired: true }
+  },
+  {
+    path: "/:collection/new",
+    name: "new",
+    component: () => import("./pages/DbNew.vue"),
+    meta: { authRequired: true }
+  },
+  {
     path: "/journals",
     name: "journals",
     component: () => import("./pages/AllJournals.vue"),

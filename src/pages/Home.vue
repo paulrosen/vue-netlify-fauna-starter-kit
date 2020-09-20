@@ -15,8 +15,7 @@
     <div v-else id="greeting">
       <h2>️ Welcome Back {{ currentUser.user_metadata.full_name }}!</h2>
       <p>
-        You're logged in. Go check out your
-        <router-link :to="{ name: 'journals' }">tunebooks️ </router-link>.
+        You're logged in.
       </p>
     </div>
   </main>

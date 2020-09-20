@@ -5,7 +5,8 @@
 			<h1>CRUD Example</h1>
 		</div>
 		<div class="right">
-			<router-link v-if="currentUser" :to="{ name: 'journals' }">Tunebooks</router-link>
+			<router-link v-if="currentUser" :to="{ name: 'journals' }">Orig</router-link>
+			<router-link v-if="currentUser" to="/journals/index">Tunebooks</router-link>
 
 			<dropdown-menu v-if="currentUser" :label="currentUser.user_metadata.full_name" :menu="userMenu"></dropdown-menu>
 			<router-link v-if="!currentUser" :to="{ name: 'login' }">Login</router-link>

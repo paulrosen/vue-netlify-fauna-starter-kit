@@ -32,7 +32,16 @@ export default {
 		currentRow(state, getters) {
 			if (getters.currentCollectionAll.length > state.currentRow)
 				return getters.currentCollectionAll[state.currentRow];
-		}
+		},
+		getRecord: (state, getters) => (id) => {
+			return state.allRecords.filter(record => {
+				const recId = record.ref.value ? record.ref.value.id : record.ref["@ref"].id;
+				return recId === id;
+			});
+		},
+		hasChildren(state) {
+			return state.currentCollection === 'journal';
+		},
 	},
 
 	mutations: {
