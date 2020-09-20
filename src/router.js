@@ -5,11 +5,15 @@ import store from "./store";
 Vue.use(VueRouter);
 
 const routes = [
-  { path: "/", redirect: "/home" },
   {
-    path: "/home",
+    path: "/",
     name: "home",
     component: () => import("./pages/Home.vue")
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: () => import("./pages/Login.vue")
   },
   {
     path: "/journals",

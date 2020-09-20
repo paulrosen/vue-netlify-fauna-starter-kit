@@ -14,9 +14,6 @@
           <li>
             <router-link :to="{ name: 'profile' }">🆔 Your Profile</router-link>
           </li>
-          <li>
-            <ThemeToggle />
-          </li>
         </ul>
       </nav>
     </transition>
@@ -41,12 +38,10 @@
 </template>
 
 <script>
-import ThemeToggle from "./ThemeToggle.vue";
 
 export default {
   name: "BurgerMenu",
   components: {
-    ThemeToggle
   },
   data() {
     return {
