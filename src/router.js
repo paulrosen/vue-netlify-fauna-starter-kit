@@ -22,6 +22,12 @@ const routes = [
     meta: { authRequired: true }
   },
   {
+    path: "/:collection/show/:id",
+    name: "show",
+    component: () => import("./pages/DbShow.vue"),
+    meta: { authRequired: true }
+  },
+  {
     path: "/journals",
     name: "journals",
     component: () => import("./pages/AllJournals.vue"),

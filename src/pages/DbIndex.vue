@@ -4,12 +4,14 @@
 		<table>
 			<tr>
 				<th v-for="col in currentCollectionColumns()" :key="col">{{col}}</th>
+				<th>Created At</th>
+				<th></th>
 			</tr>
 			<tr v-for="row in currentCollectionAll()" :key="row.id">
 				<td v-for="col in currentCollectionColumns()" :key="col">{{row[col]}}
 				</td>
 				<td>{{formatTime(row.createdAt)}}</td>
-				<td>Show Edit Delete</td>
+				<td><router-link :to="`/journals/show/${row.id}`">Show</router-link> Edit Delete</td>
 			</tr>
 		</table>
 	</main>
@@ -34,5 +36,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+	tr:nth-child(even) {
+		background-color: #dedede;
+	}
 </style>

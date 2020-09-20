@@ -3,8 +3,9 @@ export default {
 	namespaced: true,
 
 	state: {
-		currentIndex: 'journal',
+		currentCollection: 'journal',
 		allRecords: "",
+		currentRow: 0,
 	},
 
 	getters: {
@@ -28,12 +29,19 @@ export default {
 			});
 			return indexData;
 		},
+		currentRow(state, getters) {
+			if (getters.currentCollectionAll.length > state.currentRow)
+				return getters.currentCollectionAll[state.currentRow];
+		}
 	},
 
 	mutations: {
 		setAllCollectionData(state, payload) {
 			state.allRecords = payload;
 		},
+		currentRow(state, payload) {
+			state.currentRow = payload;
+		}
 	},
 
 	actions: {
@@ -45,6 +53,12 @@ export default {
 					context.commit("setAllCollectionData", resp.data);
 				})
 				.catch(err => console.error("problem getting journals", err));
+		},
+		setCurrentRow(context, payload) {
+			context.getters.currentCollectionAll.forEach((row, index) => {
+				if (row.id === payload.id)
+					context.commit("currentRow", index);
+			});
 		},
 	}
 };
