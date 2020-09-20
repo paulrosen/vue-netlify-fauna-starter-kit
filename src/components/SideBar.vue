@@ -8,7 +8,7 @@
           </li>
           <li>
             <router-link :to="{ name: 'journals' }"
-              >📔 Your Journals</router-link
+              >📔 Your Tunebooks</router-link
             >
           </li>
           <li>

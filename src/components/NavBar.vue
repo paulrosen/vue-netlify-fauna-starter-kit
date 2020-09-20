@@ -3,7 +3,7 @@
     <div id="nav-items">
       <router-link :to="{ name: 'home' }">🏠 Home</router-link>
 
-      <router-link :to="{ name: 'journals' }">📔 Your Journals</router-link>
+      <router-link :to="{ name: 'journals' }">📔 Your Tunebooks</router-link>
 
       <router-link id="profile-link" :to="{ name: 'profile' }"
         >🆔 Profile</router-link

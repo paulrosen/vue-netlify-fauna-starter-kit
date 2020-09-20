@@ -1,7 +1,7 @@
 <template>
   <main>
     <div class="space">
-      <h1>📔 Your Journals</h1>
+      <h1>📔 Your Tunebooks</h1>
 
       <div id="create-journal-container" class="shadow">
         <!-- fix to stop page from refreshing when hitting enter:
