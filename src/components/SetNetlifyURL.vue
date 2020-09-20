@@ -1,7 +1,7 @@
 <template>
   <div class="dev-check stack shadow">
     👋 Hey fellow developer! <br />It looks like you're in a local development
-    environment. Dont worry, this wont show in your production site.
+    environment. Dont worry, this won't show in your production site.
     <br />Ensure Netlify Identity is enabled and you have set your assigned
     Netlify URL here:
     <span v-if="siteURL" id="url-hint">Set URL: https://{{ siteURL }} </span>

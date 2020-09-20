@@ -32,5 +32,6 @@ export default {
 }
 .content {
 	height: calc(100vh - 97px);
+	overflow: auto;
 }
 </style>

@@ -1,17 +1,16 @@
 <template>
   <main class="home space">
-    <h1 style="text-align:center">Vue - Netlify - Fauna</h1>
     <h2>A serverless stack with authentication ready to go!</h2>
-
     <div>
       <p>
         This is a demo app to show how you can use cool technologies like Fauna
-        and Netlify to build a CRUD application completely serverless and host
+        and Netlify to build a Rails-like scaffold application completely serverless and host
         for free!
       </p>
 
     </div>
-    <LoginSignup v-if="currentUser === null" />
+	  <div v-if="currentUser === null" >Start by 			<router-link :to="{ name: 'login' }">logging in</router-link>
+		  .</div>
     <div v-else id="greeting">
       <h2>️ Welcome Back {{ currentUser.user_metadata.full_name }}!</h2>
       <p>
@@ -23,12 +22,10 @@
 
 <script>
 import { mapGetters } from "vuex";
-import LoginSignup from "../components/LoginSignup.vue";
 
 export default {
   name: "Home",
   components: {
-    LoginSignup,
   },
   props: {
     msg: String

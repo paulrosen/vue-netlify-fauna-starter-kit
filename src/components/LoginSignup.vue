@@ -44,7 +44,10 @@
         class="login-form stack"
         @keyup.enter="login()"
       >
-        <h2>🔐 Login Here</h2>
+		  <div v-if="isDevEnvironment">
+			  <SetNetlifyURL />
+		  </div>
+		  <h2>Login Here</h2>
         <label for="email">Email</label>
         <input
           id="email"
@@ -73,9 +76,6 @@
           <a href="#" @click="toggleMode">Create an account</a>
         </p>
 
-        <div v-if="isDevEnvironment">
-          <SetNetlifyURL />
-        </div>
       </form>
     </div>
   </div>
@@ -137,7 +137,7 @@ export default {
       this.attemptLogin({ ...this.crendentials })
         .then(() => {
           alert(`You have signed in!`);
-          this.$router.push(this.$route.query.redirect || "journals");
+          this.$router.push(this.$route.query.redirect || "/journals/index");
         })
         .catch(error => {
           alert(`Somethings gone wrong logging in.
