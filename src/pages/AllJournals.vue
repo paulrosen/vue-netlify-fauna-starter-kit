@@ -1,7 +1,7 @@
 <template>
   <main>
     <div class="space">
-      <h1>📔 Your Tunebooks</h1>
+      <h2>Your Tunebooks</h2>
 
       <div id="create-journal-container" class="shadow">
         <!-- fix to stop page from refreshing when hitting enter:
@@ -120,48 +120,48 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#journals-background {
-  max-width: 28rem;
-  padding: 1rem;
-  margin: 1rem;
-}
-
-#create-journal-container {
-  background: var(--app-secondary-background-color);
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  padding: 10px;
-  border-radius: 15px;
-  #create-new-journal {
-    display: flex;
-    flex-direction: column;
-  }
-
-  input[type="text"] {
-    background: var(--app-secondary-background-color);
-  }
-}
-
-#journals-container {
-  display: flex;
-  flex-wrap: wrap-reverse;
-  justify-content: center;
-}
-
-input[type="button"] {
-  border: none;
-  padding: 15px;
-  cursor: pointer;
-  border-radius: 0 0px 15px 15px;
-  background: #a7a7a7;
-}
-input[type="button"]:hover {
-  background: rgb(158, 158, 158);
-}
-
-input[type="button"]:active {
-  background: rgb(112, 112, 112);
-  box-shadow: 0px 0px 0px -4px rgba(0, 0, 0, 0.75);
-}
+//#journals-background {
+//  max-width: 28rem;
+//  padding: 1rem;
+//  margin: 1rem;
+//}
+//
+//#create-journal-container {
+//  background: var(--app-secondary-background-color);
+//  flex-direction: column;
+//  justify-content: center;
+//  text-align: center;
+//  padding: 10px;
+//  border-radius: 15px;
+//  #create-new-journal {
+//    display: flex;
+//    flex-direction: column;
+//  }
+//
+//  input[type="text"] {
+//    background: var(--app-secondary-background-color);
+//  }
+//}
+//
+//#journals-container {
+//  display: flex;
+//  flex-wrap: wrap-reverse;
+//  justify-content: center;
+//}
+//
+//input[type="button"] {
+//  border: none;
+//  padding: 15px;
+//  cursor: pointer;
+//  border-radius: 0 0px 15px 15px;
+//  background: #a7a7a7;
+//}
+//input[type="button"]:hover {
+//  background: rgb(158, 158, 158);
+//}
+//
+//input[type="button"]:active {
+//  background: rgb(112, 112, 112);
+//  box-shadow: 0px 0px 0px -4px rgba(0, 0, 0, 0.75);
+//}
 </style>

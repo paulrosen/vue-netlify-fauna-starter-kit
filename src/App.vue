@@ -2,7 +2,9 @@
 	<div class="app-background">
 		<nav-bar/>
 
+		<div class="content">
 		<router-view/>
+		</div>
 
 		<footer-area></footer-area>
 	</div>
@@ -27,6 +29,8 @@ export default {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  justify-content: space-between;
+}
+.content {
+	height: calc(100vh - 97px);
 }
 </style>

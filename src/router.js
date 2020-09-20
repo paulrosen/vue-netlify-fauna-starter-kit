@@ -16,6 +16,12 @@ const routes = [
     component: () => import("./pages/Login.vue")
   },
   {
+    path: "/:collection/index",
+    name: "index",
+    component: () => import("./pages/DbIndex.vue"),
+    meta: { authRequired: true }
+  },
+  {
     path: "/journals",
     name: "journals",
     component: () => import("./pages/AllJournals.vue"),
